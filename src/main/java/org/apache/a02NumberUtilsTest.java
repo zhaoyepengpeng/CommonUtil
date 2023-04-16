@@ -8,25 +8,24 @@ public class a02NumberUtilsTest {
         String str = "123aa";
         //只能判断整数,false
         System.out.println(NumberUtils.isDigits(str));
-        //false
-        System.out.println(NumberUtils.isDigits("12.3"));
-        //false
-        System.out.println(NumberUtils.isDigits("+12.3"));
-        //false
-        System.out.println(NumberUtils.isDigits("+12"));
-        //true
-        System.out.println(NumberUtils.isDigits("12"));
-        //false
-        System.out.println(NumberUtils.isDigits("-12"));
+        System.out.println(NumberUtils.isDigits("12.3"));//false
+        System.out.println(NumberUtils.isDigits("+12.3"));//false
+        System.out.println(NumberUtils.isDigits("+12")); //false
+        System.out.println(NumberUtils.isDigits("12"));//true
+        System.out.println(NumberUtils.isDigits("-12"));//false
         /**
          * isParsable可以判断是不是整数，浮点数，不能识别正负
          */
-        //true
-        System.out.println(NumberUtils.isParsable("12.3"));
-        //false
-        System.out.println(NumberUtils.isParsable("+12.3"));
-        //true
-        System.out.println(NumberUtils.isParsable("-12.3"));
+
+        System.out.println(NumberUtils.isParsable("12.3"));//true
+        System.out.println(NumberUtils.isParsable("+12.3"));//false
+        System.out.println(NumberUtils.isParsable("-12.3")); //true
+        /**
+         * isCreatable用法
+         */
+        System.out.println(NumberUtils.isCreatable("+12.3")); //true
+        System.out.println(NumberUtils.isCreatable("-12.3")); //true
+        System.out.println(NumberUtils.isCreatable("012.3")); //true
 
 
 
